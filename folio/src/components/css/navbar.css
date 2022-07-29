@@ -1,0 +1,17 @@
+.nav{
+    min-height: 1.5vh;
+    padding: 1em 1.5em 1em 1.5em;
+    border-bottom: 0.1em solid #5A5A5A;
+}
+
+.profile-image{
+    border-radius: 50%;
+    width: 2em;
+    height: auto;
+    border: 0.2em solid #d2ac47;
+}
+
+.icon{
+    color: white;
+    cursor: pointer;
+}

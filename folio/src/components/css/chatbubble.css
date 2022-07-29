@@ -1,0 +1,121 @@
+.chatbubble-root {
+    max-width: 70%;
+    min-width: 40%;
+    padding: 0.5em 1em 0.5em 1em;
+    border-radius: 0.6em;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 2em;
+    word-wrap: break-word;
+}
+
+.sent {
+    border-top-right-radius: 0;
+    background-color: #1084fc;
+    animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s; /* Firefox */
+    -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+    -o-animation: fadein 0.5s; /* Opera */
+}
+
+.received {
+    border-top-left-radius: 0;
+    background-color: #403c3c;
+    animation: fade-in-move-right 0.5s;
+    animation: fade-in-move-right 0.5s;
+    -moz-animation: fade-in-move-right 0.5s; /* Firefox */
+    -webkit-animation: fade-in-move-right 0.5s; /* Safari and Chrome */
+    -o-animation: fade-in-move-right 0.5s; /* Opera */
+}
+
+a{
+    color: rgba(255, 214, 10, 1);
+}
+
+
+/* ========== Fade in animation ========== */
+@keyframes fadein {
+    from {
+        opacity:0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity:1;
+        transform: translateX(0%);
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity:1;
+        transform: translateX(0%);
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity:1;
+        transform: translateX(0%);
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+/* ============================================ */
+
+
+@keyframes fade-in-move-right {
+    from {
+        opacity: 0;
+        transform: translateX(-70%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes fade-in-move-right {
+    from {
+        opacity: 0;
+        transform: translateX(-70%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes fade-in-move-right {
+    from {
+        opacity: 0;
+        transform: translateX(-70%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@-o-keyframes fade-in-move-right {
+    from {
+        opacity: 0;
+        transform: translateX(-70%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
