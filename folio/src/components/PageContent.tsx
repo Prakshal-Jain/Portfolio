@@ -1,6 +1,6 @@
 import "./css/pagecontent.css";
 import FlexLayout from "./FlexLayout";
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 type Props = {
     children: JSX.Element | JSX.Element[],
@@ -9,6 +9,16 @@ type Props = {
 
 const PageContent = (props: Props) => {
     const [loading, setLoading] = useState(true);
+    let messagesEndRef = useRef<HTMLDivElement>(null);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+    }
+
+    useEffect(() => {
+        scrollToBottom()
+    }, [loading]);
+
     const _id = setTimeout(() =>
         setLoading(false)
         , props.delay)
@@ -19,7 +29,7 @@ const PageContent = (props: Props) => {
     else {
         return (
             <FlexLayout direction="vertical" align="center" >
-                <div className={`pagecontent-root`}>
+                <div className={`pagecontent-root`} ref={messagesEndRef}>
                     {props.children}
                 </div>
             </FlexLayout >

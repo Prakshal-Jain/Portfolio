@@ -4,8 +4,9 @@ import Hello from "../assets/Hello.png";
 import Sure from "../assets/Sure.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faSmile } from "@fortawesome/free-solid-svg-icons";
-import '../css/chatfolio.css';
 import PageContent from "../components/PageContent";
+import { pages } from "../data/pages"
+import '../css/chatfolio.css';
 
 export const messages = [
     <ChatBubble isSent={false} delay={0}>
@@ -45,14 +46,16 @@ export const messages = [
                 <img src={Sure} className="image" />
             </div>
             <div className="chat-text">
-                <div>Sure! I would love to <FontAwesomeIcon icon={faHeart} style={{color: "red"}} /></div>
+                <div>Sure! I would love to <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} /></div>
                 <div>
-                    Please click on any tab below to learn more about me in that domain <FontAwesomeIcon icon={faSmile} style={{color: "#ffcb4c"}} />
+                    Please click on any tab below to learn more about me in that domain <FontAwesomeIcon icon={faSmile} style={{ color: "#ffcb4c" }} />
                 </div>
             </div>
         </FlexLayout>
     </ChatBubble>,
     <PageContent delay={1300}>
-        <div>Hello</div>
+        <FlexLayout direction="horizontal" align="stretch" style={{flexWrap: 'wrap'}}>
+            {pages.map(({ name, url }) => <div className="tile">{name}</div>)}
+        </FlexLayout>
     </PageContent>
 ]

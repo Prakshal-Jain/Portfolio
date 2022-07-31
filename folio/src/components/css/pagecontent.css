@@ -1,5 +1,6 @@
 .pagecontent-root{
-    margin-top: 2vh;
+    margin-top: 2em;
+    margin-bottom: 2em;
     animation: fade-in 0.5s;
     -moz-animation: fade-in 0.5s; /* Firefox */
     -webkit-animation: fade-in 0.5s; /* Safari and Chrome */

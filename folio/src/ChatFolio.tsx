@@ -3,7 +3,7 @@ import ChatContainer from './components/ChatContainer'
 import './css/chatfolio.css';
 import { useState } from 'react';
 
-import {messages as init_messages} from "./data/messages"
+import {messages as init_messages} from "./data/messages";
 
 
 

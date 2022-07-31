@@ -1,3 +1,20 @@
 body{
-    background-color: #28282B;
+    background-color: #000;
+}
+
+.tile{
+    background-color: #151516;
+    margin: 0.5em;
+    border-radius: 0.6em;
+    padding: 1em;
+    width: fit-content;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+    border: 0.1em solid #28282B;
+    cursor: pointer;
+}
+
+.tile:hover{
+    box-shadow: rgba(0, 153, 255, 0.35) 0px 5px 15px;
 }
