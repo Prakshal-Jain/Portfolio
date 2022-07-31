@@ -11,10 +11,10 @@
 .sent {
     border-top-right-radius: 0;
     background-color: #1084fc;
-    animation: fadein 0.5s;
-    -moz-animation: fadein 0.5s; /* Firefox */
-    -webkit-animation: fadein 0.5s; /* Safari and Chrome */
-    -o-animation: fadein 0.5s; /* Opera */
+    animation: fade-in-move-left 0.5s;
+    -moz-animation: fade-in-move-left 0.5s; /* Firefox */
+    -webkit-animation: fade-in-move-left 0.5s; /* Safari and Chrome */
+    -o-animation: fade-in-move-left 0.5s; /* Opera */
 }
 
 .received {
@@ -33,7 +33,7 @@ a{
 
 
 /* ========== Fade in animation ========== */
-@keyframes fadein {
+@keyframes fade-in-move-left {
     from {
         opacity:0;
         transform: translateX(100%);
@@ -43,7 +43,7 @@ a{
         transform: translateX(0%);
     }
 }
-@-moz-keyframes fadein { /* Firefox */
+@-moz-keyframes fade-in-move-left { /* Firefox */
     from {
         opacity:0;
         transform: translateX(100%);
@@ -53,7 +53,7 @@ a{
         transform: translateX(0%);
     }
 }
-@-webkit-keyframes fadein { /* Safari and Chrome */
+@-webkit-keyframes fade-in-move-left { /* Safari and Chrome */
     from {
         opacity:0;
         transform: translateX(100%);
@@ -63,7 +63,7 @@ a{
         transform: translateX(0%);
     }
 }
-@-o-keyframes fadein { /* Opera */
+@-o-keyframes fade-in-move-left { /* Opera */
     from {
         opacity:0;
         transform: translateX(100%);
