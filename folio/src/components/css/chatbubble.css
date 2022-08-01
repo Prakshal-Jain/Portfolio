@@ -31,6 +31,13 @@ a{
     color: rgba(255, 214, 10, 1);
 }
 
+.user-icon{
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.2em solid #d2ac47;
+}
+
 
 /* ========== Fade in animation ========== */
 @keyframes fade-in-move-left {

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import ChatBubble from '../components/ChatBubble';
+import myPic from "../assets/myPic.jpeg";
 
 type Props = {
     messages: JSX.Element[],
@@ -25,7 +26,7 @@ const Navbar = ({ messages, setMessages }: Props) => {
         <nav className="nav">
             <FlexLayout direction="horizontal" align="center">
                 <div>
-                    <img src="https://prakshal-jain.github.io/myPic.jpg" className="profile-image" />
+                    <img src={myPic} className="profile-image" />
                 </div>
 
                 <h3 style={{ marginLeft: '0.5em' }}>Prakshal Jain</h3>

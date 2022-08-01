@@ -53,9 +53,18 @@ export const messages = [
             </div>
         </FlexLayout>
     </ChatBubble>,
-    <PageContent delay={1300}>
-        <FlexLayout direction="horizontal" align="stretch" style={{flexWrap: 'wrap'}}>
-            {pages.map(({ name, url }) => <div className="tile">{name}</div>)}
-        </FlexLayout>
-    </PageContent>
+    <div className="sticky">
+        <PageContent delay={1300}>
+            <FlexLayout direction="horizontal" align="stretch" style={{ flexWrap: 'wrap' }}>
+                {pages.map(({ name, url, icon }) => (
+                    <div className="tile" role="button" onClick={() => { }}>
+                        <FlexLayout>
+                            <FontAwesomeIcon icon={icon} />
+                            <div>{name}</div>
+                        </FlexLayout>
+                    </div>
+                ))}
+            </FlexLayout>
+        </PageContent>
+    </div>
 ]

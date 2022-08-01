@@ -28,7 +28,7 @@ const PageContent = (props: Props) => {
     }
     else {
         return (
-            <FlexLayout direction="vertical" align="center" >
+            <FlexLayout direction="vertical" align="center">
                 <div className={`pagecontent-root`} ref={messagesEndRef}>
                     {props.children}
                 </div>
