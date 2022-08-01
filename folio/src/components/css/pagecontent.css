@@ -24,6 +24,11 @@
     box-shadow: rgba(0, 153, 255, 0.35) 0px 5px 15px;
 }
 
+.active-tile{
+    /* box-shadow: rgba(0, 153, 255, 0.35) 0px 5px 15px; */
+    border: 0.1em solid rgba(0, 153, 255, 1);
+}
+
 .info-container{
     text-align: left;
     margin-bottom: 1em;

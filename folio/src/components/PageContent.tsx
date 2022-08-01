@@ -34,7 +34,7 @@ const PageContent = (props: Props) => {
                 <div className={`pagecontent-root`} ref={messagesEndRef}>
                     <FlexLayout direction="horizontal" align="stretch" style={{ flexWrap: 'wrap' }}>
                         {pages.map(({ name, description, icon }, index) => (
-                            <div className="tile" role="button" onClick={() => setSelectedTab(index)}>
+                            <div className={`tile ${selectedTab === index ? "active-tile" : ""}`} role="button" onClick={() => setSelectedTab(index)}>
                                 <FlexLayout>
                                     <FontAwesomeIcon icon={icon} />
                                     <div>{name}</div>
