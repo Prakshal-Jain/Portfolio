@@ -5,7 +5,6 @@ import Sure from "../assets/Sure.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faSmile } from "@fortawesome/free-solid-svg-icons";
 import PageContent from "../components/PageContent";
-import { pages } from "../data/pages"
 import '../css/chatfolio.css';
 
 export const messages = [
@@ -54,17 +53,6 @@ export const messages = [
         </FlexLayout>
     </ChatBubble>,
     <div className="sticky">
-        <PageContent delay={1300}>
-            <FlexLayout direction="horizontal" align="stretch" style={{ flexWrap: 'wrap' }}>
-                {pages.map(({ name, url, icon }) => (
-                    <div className="tile" role="button" onClick={() => { }}>
-                        <FlexLayout>
-                            <FontAwesomeIcon icon={icon} />
-                            <div>{name}</div>
-                        </FlexLayout>
-                    </div>
-                ))}
-            </FlexLayout>
-        </PageContent>
+        <PageContent delay={1300} />
     </div>
 ]

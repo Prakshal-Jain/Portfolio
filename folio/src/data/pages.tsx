@@ -3,27 +3,27 @@ import { faCode, faStar, faSuitcase, faTrophy, faUser } from "@fortawesome/free-
 export const pages = [
     {
         name: "About Me",
-        url: "",
-        icon: faUser
+        icon: faUser,
+        description: "Hello",
     },
     {
         name: "Work Experiences",
-        url: "",
-        icon: faSuitcase
+        icon: faSuitcase,
+        description: "Hello",
     },
     {
         name: "Projects",
-        url: "",
-        icon: faCode
+        icon: faCode,
+        description: "Hello",
     },
     {
         name: "Honors and Awards",
-        url: "",
-        icon: faTrophy
+        icon: faTrophy,
+        description: "Hello",
     },
     {
         name: "Recommenations",
-        url: "",
-        icon: faStar
+        icon: faStar,
+        description: "Hello",
     },
 ]
