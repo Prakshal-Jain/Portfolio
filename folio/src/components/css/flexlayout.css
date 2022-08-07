@@ -1,33 +1,39 @@
-.root{
+.root {
     display: flex;
     color: white;
     gap: 0.5em;
 }
 
-.row{
+.row {
     flex-flow: row;
 }
 
-.column{
+.column {
     flex-flow: column;
 }
 
-.align-center{
+@media (max-width: 768px) {
+    .root {
+        flex-wrap: wrap;
+    }
+}
+
+.align-center {
     align-items: center;
 }
 
-.align-stretch{
+.align-stretch {
     align-items: stretch;
 }
 
-.align-inherit{
+.align-inherit {
     align-items: inherit;
 }
 
-.align-start{
+.align-start {
     align-items: flex-start;
 }
 
-.align-end{
+.align-end {
     align-items: flex-end;
 }

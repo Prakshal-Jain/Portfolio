@@ -5,6 +5,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import ChatBubble from '../components/ChatBubble';
 import myPic from "../assets/myPic.jpeg";
+import { Link } from 'react-router-dom';
 
 type Props = {
     messages: JSX.Element[],
@@ -26,10 +27,12 @@ const Navbar = ({ messages, setMessages }: Props) => {
         <nav className="nav">
             <FlexLayout direction="horizontal" align="center">
                 <div>
-                    <img src={myPic} className="profile-image" />
+                    <Link to="/">
+                        <img src={myPic} className="profile-image" />
+                    </Link>
                 </div>
 
-                <h3 style={{ marginLeft: '0.5em' }}>Prakshal Jain</h3>
+                <h3 style={{ marginLeft: '0.5em' }}><Link to="/" className="nostyle">Prakshal Jain</Link></h3>
 
                 <div style={{ marginLeft: 'auto' }}>
                     <FontAwesomeIcon icon={faPhone} className="icon" size="lg" onClick={handleSetMessages} />

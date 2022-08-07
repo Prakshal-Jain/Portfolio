@@ -1,4 +1,4 @@
-.pagecontent-root{
+.pagecontent-root {
     margin-top: 2em;
     margin-bottom: 2em;
     animation: fade-in 0.5s;
@@ -7,7 +7,7 @@
     -o-animation: fade-in 0.5s; /* Opera */
 }
 
-.tile{
+.tile {
     background-color: #151516;
     margin: 0.2em;
     border-radius: 0.6em;
@@ -16,25 +16,40 @@
     flex-grow: 1;
     text-align: center;
     align-items: center;
-    border: 0.1em solid #28282B;
+    border: 0.1em solid #28282b;
     cursor: pointer;
 }
 
-.tile:hover{
+.tile:hover {
     box-shadow: rgba(0, 153, 255, 0.35) 0px 5px 15px;
 }
 
-.active-tile{
-    /* box-shadow: rgba(0, 153, 255, 0.35) 0px 5px 15px; */
+.active-tile {
     border: 0.1em solid rgba(0, 153, 255, 1);
 }
 
-.info-container{
+.info-container {
     text-align: left;
     margin-bottom: 1em;
     width: 100%;
+    padding: 1em;
+    margin: 2em;
+    background-color: #151516;
+    border: 0.1em solid #28282b;
+    border-radius: 0.6em;
+    animation: fade-in 0.5s;
+    -moz-animation: fade-in 0.5s; /* Firefox */
+    -webkit-animation: fade-in 0.5s; /* Safari and Chrome */
+    -o-animation: fade-in 0.5s; /* Opera */
 }
 
+.sticky {
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    height: auto;
+}
 
 
 @keyframes fade-in {

@@ -1,4 +1,4 @@
-import "./css/chatcontainer.css";
+import "../css/chatcontainer.css";
 
 type Props = {
     messages: JSX.Element[]

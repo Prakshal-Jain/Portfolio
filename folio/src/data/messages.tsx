@@ -52,7 +52,5 @@ export const messages = [
             </div>
         </FlexLayout>
     </ChatBubble>,
-    <div className="sticky">
-        <PageContent delay={1300} />
-    </div>
+    <PageContent delay={1300} isSticky={true} />
 ]

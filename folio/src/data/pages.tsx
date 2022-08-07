@@ -1,29 +1,35 @@
-import { faCode, faStar, faSuitcase, faTrophy, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faStar, faSuitcase, faTrophy, faUser, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
-export const pages = [
+type Page = {
+    name: string,
+    icon: IconDefinition,
+    url: string
+}
+
+export const pages: Page[] = [
     {
         name: "About Me",
         icon: faUser,
-        description: "Hello",
+        url: "/about",
     },
     {
         name: "Work Experiences",
         icon: faSuitcase,
-        description: "Hello",
+        url: "/Hello",
     },
     {
         name: "Projects",
         icon: faCode,
-        description: "Hello",
+        url: "/Hello",
     },
     {
         name: "Honors and Awards",
         icon: faTrophy,
-        description: "Hello",
+        url: "Hello",
     },
     {
         name: "Recommenations",
         icon: faStar,
-        description: "Hello",
+        url: "Hello",
     },
 ]

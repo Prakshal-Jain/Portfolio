@@ -3,15 +3,18 @@ import FlexLayout from "./FlexLayout";
 import { useEffect, useRef, useState } from 'react';
 import { pages } from "../data/pages"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 type Props = {
     delay: number,
+    isSticky?: boolean,
+    selected?: number,
 }
 
 const PageContent = (props: Props) => {
     const [loading, setLoading] = useState(true);
     let messagesEndRef = useRef<HTMLDivElement>(null);
-    let [selectedTab, setSelectedTab] = useState(-1);
+    let [selectedTab, setSelectedTab] = useState(props.selected ?? -1);
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -31,21 +34,17 @@ const PageContent = (props: Props) => {
     else {
         return (
             <FlexLayout direction="vertical" align="center">
-                <div className={`pagecontent-root`} ref={messagesEndRef}>
+                <div className={`pagecontent-root ${props.isSticky === true ? "sticky" : ""}`} ref={props.isSticky === true ? messagesEndRef : null}>
                     <FlexLayout direction="horizontal" align="stretch" style={{ flexWrap: 'wrap' }}>
-                        {pages.map(({ name, description, icon }, index) => (
-                            <div className={`tile ${selectedTab === index ? "active-tile" : ""}`} role="button" onClick={() => setSelectedTab(index)}>
+                        {pages.map(({ name, url, icon }, index) => (
+                            <Link to={url} className={`tile ${selectedTab === index ? "active-tile" : ""}`} role="button" style={{textDecoration: 'none'}} onClick={() => setSelectedTab(index)}>
                                 <FlexLayout>
                                     <FontAwesomeIcon icon={icon} />
                                     <div>{name}</div>
                                 </FlexLayout>
-                            </div>
+                            </Link>
                         ))}
                     </FlexLayout>
-                </div>
-
-                <div className="info-container">
-                    {selectedTab > -1 && pages[selectedTab].description}
                 </div>
             </FlexLayout>
         )
