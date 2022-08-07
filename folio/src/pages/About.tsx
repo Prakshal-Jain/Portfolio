@@ -9,10 +9,11 @@ import { Link } from "react-router-dom";
 
 const About = () => (
     <FlexLayout direction="vertical" align="stretch" style={{ marginBottom: '2em' }}>
-        
+
         <FlexLayout>
             <div className="about-container" style={{ minWidth: '35%' }}>
                 <img src={Heart} className="about-image" />
+                <h3>Designer, Developer, Innovator</h3>
                 <h4>Front End Software Developer Intern at Meta (Facebook)</h4>
                 <PageContent delay={0} selected={0} />
             </div>

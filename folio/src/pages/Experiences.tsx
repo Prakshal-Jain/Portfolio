@@ -2,10 +2,12 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import FlexLayout from '../components/FlexLayout';
+import PageContent from '../components/PageContent';
 import { experiences } from "../data/experience_list";
 
 const Experiences = () => (
-    <div>
+    <FlexLayout direction="vertical">
         <VerticalTimeline lineColor='#5A5A5A'>
             {experiences.map(({ company, role, start_date, end_date, logo, description, background_color, color }) => (
                 <VerticalTimelineElement
@@ -22,7 +24,8 @@ const Experiences = () => (
                 </VerticalTimelineElement>
             ))}
         </VerticalTimeline>
-    </div>
+        <PageContent delay={0} selected={1} />
+    </FlexLayout>
 )
 
 export default Experiences;
