@@ -15,7 +15,7 @@ export const pages: Page[] = [
     {
         name: "Work Experiences",
         icon: faSuitcase,
-        url: "/Hello",
+        url: "/experiences",
     },
     {
         name: "Projects",

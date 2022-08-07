@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 const About = () => (
     <FlexLayout direction="vertical" align="stretch" style={{ marginBottom: '2em' }}>
+        
         <FlexLayout>
             <div className="about-container" style={{ minWidth: '35%' }}>
                 <img src={Heart} className="about-image" />
