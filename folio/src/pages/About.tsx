@@ -3,9 +3,12 @@ import Heart from '../assets/Heart.png';
 import "../css/about.css";
 import PageContent from "../components/PageContent";
 import { skills } from "../data/skills"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const About = () => (
-    <FlexLayout direction="vertical">
+    <FlexLayout direction="vertical" align="stretch" style={{ marginBottom: '2em' }}>
         <FlexLayout>
             <div className="about-container" style={{ minWidth: '35%' }}>
                 <img src={Heart} className="about-image" />
@@ -33,16 +36,21 @@ const About = () => (
         <FlexLayout align="stretch">
             <div className="about-container" style={{ flexGrow: 1 }}>
                 <h3>Skills</h3>
-                <hr/>
+                <hr />
                 {Object.entries(skills).map(([skill_title, skill_list]) => (
                     <div>
                         <h4>{skill_title}</h4>
-                        <FlexLayout style={{flexWrap: 'wrap'}} align="center">{skill_list.map(skill => <div className="skill-box">{skill}</div>)}</FlexLayout>
+                        <FlexLayout style={{ flexWrap: 'wrap' }} align="center">{skill_list.map(skill => <div className="skill-box">{skill}</div>)}</FlexLayout>
                     </div>
                 ))}
             </div>
         </FlexLayout>
 
+        <div style={{textAlign: 'center'}}>
+            <Link to="/" className="nostyle">
+                <FontAwesomeIcon icon={faHome} />
+            </Link>
+        </div>
     </FlexLayout>
 )
 
