@@ -1,7 +1,6 @@
 import FlexLayout from "../components/FlexLayout";
 import Heart from '../assets/Heart.png';
 import "../css/about.css";
-import PageContent from "../components/PageContent";
 import { skills } from "../data/skills"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +14,6 @@ const About = () => (
                 <img src={Heart} className="about-image" />
                 <h3>Designer, Developer, Innovator</h3>
                 <h4>Front End Software Developer Intern at Meta (Facebook)</h4>
-                <PageContent delay={0} selected={0} />
             </div>
 
             <div className="about-container" style={{ flexGrow: 1 }}>

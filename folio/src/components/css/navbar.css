@@ -1,9 +1,11 @@
 .nav {
     min-height: 1.5vh;
-    padding: 1em 1.5em 1em 1.5em;
-    border-bottom: 0.1em solid #5a5a5a;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(0.5em);
+}
+
+.border-bottom-nav {
+    border-bottom: 0.1em solid #5a5a5a;
 }
 
 .profile-image {
@@ -20,4 +22,9 @@
 
 .z-top {
     z-index: 1;
+}
+
+.nav-submenu {
+    border-top: 0.1em solid #28282b;
+    border-bottom: 0.1em solid #5a5a5a;
 }

@@ -9,7 +9,7 @@ import { experiences } from "../data/experience_list";
 const Experiences = () => (
     <FlexLayout direction="vertical">
         <VerticalTimeline lineColor='#5A5A5A'>
-            {experiences.map(({ company, role, start_date, end_date, logo, description, background_color, color }) => (
+            {experiences.map(({ company, role, start_date, end_date, logo, description, background_color, color }, idx) => (
                 <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     contentStyle={{ background: background_color, color: color }}
@@ -17,6 +17,7 @@ const Experiences = () => (
                     date={`${start_date} - ${end_date}`}
                     iconStyle={{ background: background_color, color: color }}
                     icon={logo}
+                    key={`experience-${idx}`}
                 >
                     <h3 className="vertical-timeline-element-title">{company}</h3>
                     <h4 className="vertical-timeline-element-subtitle">{role}</h4>
@@ -24,7 +25,6 @@ const Experiences = () => (
                 </VerticalTimelineElement>
             ))}
         </VerticalTimeline>
-        <PageContent delay={0} selected={1} />
     </FlexLayout>
 )
 

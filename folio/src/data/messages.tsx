@@ -3,7 +3,7 @@ import FlexLayout from "../components/FlexLayout";
 import Hello from "../assets/Hello.png";
 import Sure from "../assets/Sure.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faSmile } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faClose, faHeart, faSmile } from "@fortawesome/free-solid-svg-icons";
 import PageContent from "../components/PageContent";
 import '../css/chatfolio.css';
 
@@ -45,12 +45,13 @@ export const messages = [
                 <img src={Sure} className="image" />
             </div>
             <div className="chat-text">
-                <div>Sure! I would love to <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} /></div>
+                <div>Sure! I would love to...</div>
+                <div><b>Please click on the <FontAwesomeIcon icon={faClose} style={{ margin: '0.2em', marginBottom: 0, padding: '0.2em', border: 'thin solid rgba(255, 214, 10, 1)', borderRadius: '0.2em' }} /> on top right of the navigation bar to close the tab view. You can click on <FontAwesomeIcon icon={faBars} style={{ marginLeft: '0.2em', marginRight: '0.2em', padding: '0.2em', border: 'thin solid rgba(255, 214, 10, 1)', borderRadius: '0.2em' }} /> to reopen it.</b></div>
+                <p>Or</p>
                 <div>
-                    Please click on any tab below to learn more about me in that domain <FontAwesomeIcon icon={faSmile} style={{ color: "#ffcb4c" }} />
+                    Please click on the tabs above to learn more about me in that domain. <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
                 </div>
             </div>
         </FlexLayout>
     </ChatBubble>,
-    <PageContent delay={1300} isSticky={true} />
 ]

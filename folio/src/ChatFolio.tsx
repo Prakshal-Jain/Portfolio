@@ -1,20 +1,28 @@
 import Navbar from './components/Navbar';
 import ChatContainer from './pages/ChatContainer'
 import './css/chatfolio.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { messages as init_messages } from "./data/messages";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from './pages/About';
 import Experiences from './pages/Experiences';
+import { pages } from "./data/pages"
+import PageContent from './components/PageContent';
 
 function ChatFolio() {
   const [messages, setMessages] = useState(init_messages);
 
+  const url = window.location.href;
+  const {
+    pathname
+  } = new URL(url);
+  const [currTab, setCurrTab] = useState<number>(pages.findIndex(x => x.url === pathname));
+
   return (
     <div className="fullheight">
       <BrowserRouter>
-        <Navbar messages={messages} setMessages={setMessages} />
+        <Navbar messages={messages} setMessages={setMessages} currTab={currTab} setCurrTab={setCurrTab} />
         <Routes>
           <Route path="/" element={<ChatContainer messages={messages} />} />
           <Route path="about" element={<About />} />
