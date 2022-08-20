@@ -150,4 +150,136 @@ export const experiences = [
         background_color: '#0067ac',
         color: '#fff'
     },
+
+    {
+        company: "University at Buffalo",
+        role: "Teaching Assistant (Data Structures)",
+        start_date: "Aug 2021",
+        end_date: "Dec 2022",
+        description: (
+            <div>
+                <p><b>Impact: </b>Boosed the performance of overall class by 34%.</p>
+                <p><b>Background:</b> Teaching assistants needs to have clear concepts of the data structurs and algorithms to clarify doubts for students and understand and track their progress.</p>
+                <p>
+                    <b>Responsibilities:</b>
+                    <ul>
+                        <li>
+                            Conducting recitations and office hours.
+                        </li>
+                        <li>
+                            Checking homework and tests.
+                        </li>
+                        <li>
+                            Writing test scripts for programming assignments automated checking for total class size of 100 students.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        ),
+        logo: <img src={ub} className="vertical-center" style={{ width: '100%', borderColor: '#ee4a21' }} />,
+        background_color: '#460109',
+        color: '#fff'
+    },
+
+    {
+        company: "University at Buffalo",
+        role: "OneDataShare - Frontend Developer",
+        start_date: "Aug 2020",
+        end_date: "Oct 2020",
+        description: (
+            <div>
+                <p><b>Impact: </b>Accelerating the product shipping deadline by 3 months by building sophisticated components quickly in React.</p>
+                <p><b>Background:</b> Part of a research team involved in creating a tool, designed to work with the existing computing infrastructure to boost data transfer speeds by more than 10 times. Project funded by National Science Foundation with $584,469 grant to address this problem.</p>
+                <p>
+                    <b>Responsibilities:</b>
+                    <ul>
+                        <li>
+                            Wireframing, prototyping, and developing the frontend components, and working on the website UI component.
+                        </li>
+                        <li>
+                            Incorporating RESTful API developed for the organization to fetch and display user information securely on an endpoint credential page.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        ),
+        logo: <img src={ub} className="vertical-center" style={{ width: '100%', borderColor: '#ee4a21' }} />,
+        background_color: '#0067ac',
+        color: '#fff'
+    },
+
+    {
+        company: "University at Buffalo School of Social Work",
+        role: "Web Designer and Developer",
+        start_date: "Jul 2020",
+        end_date: "Sep 2020",
+        description: (
+            <div>
+                <p>
+                    <b>Responsibilities:</b>
+                    <ul>
+                        <li>
+                            Building subdomains of the blogging website for the University at Buffalo School of Social Work to allow people to post the problems and solutions of societal problems and use that information towards research.
+                        </li>
+                        <li>
+                            Creating a fully functional portal (Django Backend and SQL) to manage and store user data.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        ),
+        logo: <img src={ub} className="vertical-center" style={{ width: '100%', borderColor: '#ee4a21' }} />,
+        background_color: '#400740',
+        color: '#fff'
+    },
+
+
+    {
+        company: "University at Buffalo",
+        role: "Teaching Assistant (UB Seminar)",
+        start_date: "Aug 2020",
+        end_date: "Dec 2020",
+        description: (
+            <div>
+                <p><b>Impact: </b>Managed 93 students.</p>
+                <p>
+                    <b>Responsibilities:</b>
+                    <ul>
+                        <li>
+                            Tutoring students and grading weekly homework and recitations for 3 Computer Science Seminar sessions.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        ),
+        logo: <img src={ub} className="vertical-center" style={{ width: '100%', borderColor: '#ee4a21' }} />,
+        background_color: '#0067ac',
+        color: '#fff'
+    },
+
+    {
+        company: "University at Buffalo",
+        role: "Tech-Squad Consultant",
+        start_date: "Feb 2021",
+        end_date: "Aug 2021",
+        description: (
+            <div>
+                <p><b>Background:</b> UBIT serves to resolve technical issues of over 30,000 UB Students, faculty, and staff.</p>
+                <p>
+                    <b>Responsibilities:</b>
+                    <ul>
+                        <li>
+                            Resolving hardware and software-related Technical issues and writing reports.
+                        </li>
+                        <li>
+                            Sending out notification emails, reporting issues, updating information.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        ),
+        logo: <img src={ub} className="vertical-center" style={{ width: '100%', borderColor: '#ee4a21' }} />,
+        background_color: '#322975',
+        color: '#fff'
+    },
 ]
