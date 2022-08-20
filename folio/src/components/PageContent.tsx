@@ -9,6 +9,7 @@ type Props = {
     delay: number,
     isSticky?: boolean,
     selected?: number,
+    style?: React.CSSProperties
 }
 
 const PageContent = (props: Props) => {
@@ -33,7 +34,7 @@ const PageContent = (props: Props) => {
     }
     else {
         return (
-            <FlexLayout direction="vertical" align="center">
+            <FlexLayout direction="vertical" align="center" style={props.style}>
                 <div className={`pagecontent-root ${props.isSticky === true ? "sticky" : ""}`} ref={props.isSticky === true ? messagesEndRef : null}>
                     <FlexLayout direction="horizontal" align="stretch" style={{ flexWrap: 'wrap' }}>
                         {pages.map(({ name, url, icon }, index) => (

@@ -2,6 +2,8 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import starkandwayne from '../assets/starkandwayne.png';
 import memoryfox from "../assets/memoryfox.png";
+import ub from "../assets/UB.png"
+import tbp from "../assets/TBP.png"
 
 export const experiences = [
     {
@@ -72,6 +74,80 @@ export const experiences = [
         ),
         logo: <img src={memoryfox} className="vertical-center" style={{ width: '100%' }} />,
         background_color: '#ee4a21',
+        color: '#fff'
+    },
+
+    {
+        company: "University at Buffalo",
+        role: "Front End Developer",
+        start_date: "Mar 2020",
+        end_date: "May 2021",
+        description: (
+            <ul>
+                <li>
+                    Reduced research publication process time by 65% by designing, implementing UIs, documenting,
+                    and developing the website, accessibility resources, multiple in-site portals, and Bash scripting to automate code deployment for the Computing for Social Good organization from the ground up.
+                </li>
+            </ul>
+        ),
+        logo: <img src={ub} className="vertical-center" style={{ width: '100%', borderColor: '#ee4a21' }} />,
+        background_color: '#0067ac',
+        color: '#fff'
+    },
+
+    {
+        company: "The Tau Beta Pi Association, Inc.",
+        role: "Vice President",
+        start_date: "May 2021",
+        end_date: "May 2022",
+        description: (
+            <ul>
+                <li>
+                    Vice president and scholar of honor society. Only top 1/8th student of junior class are invited to join.
+                </li>
+                <li>
+                    Boosted the student's participation rate inclub activities by 40% in comparison to previous years.
+                </li>
+                <li>
+                    Setting up team meetings and planning out the next steps and events.
+                </li>
+                <li>
+                    Sending details of current and future students to headquarters.
+                </li>
+                <li>
+                    Organizing meetings with guests.
+                </li>
+            </ul>
+        ),
+        logo: <img src={tbp} className="vertical-center" style={{ width: '100%' }} />,
+        background_color: '#28282b',
+        color: '#fff'
+    },
+
+    {
+        company: "University at Buffalo Department of Communicative Disorders & Sciences",
+        role: "Software Developer",
+        start_date: "Feb 2021",
+        end_date: "Jan 2022",
+        description: (
+            <div>
+                <p><b>Impact: </b>Increased the participation rate from 25 participants to 220 participants per week. Reduced analysis time per participant from around 45 min. to 4 min.</p>
+                <p><b>Background:</b> The research by the Department of Communicative Disorders &amp; Sciences, University at Buffalo focuses on speech deficits in Parkinson's disease and other neurological movement disorders.</p>
+                <p>
+                    <b>Responsibilities:</b>
+                    <ul>
+                        <li>
+                            Programming perceptual experiments using JavaScript (MERN).
+                        </li>
+                        <li>
+                            Multi-channel sound analysis etc. using Python (PsychoPy and sounddevice).
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        ),
+        logo: <img src={ub} className="vertical-center" style={{ width: '100%', borderColor: '#ee4a21' }} />,
+        background_color: '#0067ac',
         color: '#fff'
     },
 ]

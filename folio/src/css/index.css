@@ -27,11 +27,11 @@ code {
   text-align: center;
 }
 
-.medium-text{
+.medium-text {
   font-size: large;
 }
 
-hr{
+hr {
   border: 0.1em solid #28282b;
   background-color: #28282b;
 }
@@ -42,4 +42,18 @@ hr{
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.sticky {
+  top: 0em;
+  left: 0em;
+  right: 0em;
+  position: -webkit-sticky;
+  position: sticky;
+  height: auto;
+}
+
+
+.bg-dark{
+  background-color: #000;
 }

@@ -24,7 +24,7 @@ const Navbar = ({ messages, setMessages }: Props) => {
     }
 
     return (
-        <nav className="nav">
+        <nav className="nav sticky z-top">
             <FlexLayout direction="horizontal" align="center">
                 <div>
                     <Link to="/">

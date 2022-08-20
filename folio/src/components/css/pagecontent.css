@@ -1,6 +1,8 @@
 .pagecontent-root {
     margin-top: 2em;
     margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
     animation: fade-in 0.5s;
     -moz-animation: fade-in 0.5s; /* Firefox */
     -webkit-animation: fade-in 0.5s; /* Safari and Chrome */
@@ -41,14 +43,6 @@
     -moz-animation: fade-in 0.5s; /* Firefox */
     -webkit-animation: fade-in 0.5s; /* Safari and Chrome */
     -o-animation: fade-in 0.5s; /* Opera */
-}
-
-.sticky {
-    top: 0;
-    position: -webkit-sticky;
-    position: sticky;
-    width: 100%;
-    height: auto;
 }
 
 
