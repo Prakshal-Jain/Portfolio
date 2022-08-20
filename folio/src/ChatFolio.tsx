@@ -1,14 +1,14 @@
 import Navbar from './components/Navbar';
 import ChatContainer from './pages/ChatContainer'
 import './css/chatfolio.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { messages as init_messages } from "./data/messages";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from './pages/About';
 import Experiences from './pages/Experiences';
 import { pages } from "./data/pages"
-import PageContent from './components/PageContent';
+import Projects from './pages/Projects';
 
 function ChatFolio() {
   const [messages, setMessages] = useState(init_messages);
@@ -27,6 +27,7 @@ function ChatFolio() {
           <Route path="/" element={<ChatContainer messages={messages} />} />
           <Route path="about" element={<About />} />
           <Route path="experiences" element={<Experiences />} />
+          <Route path="projects" element={<Projects />} />
         </Routes>
       </BrowserRouter>
     </div>

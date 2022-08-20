@@ -50,7 +50,7 @@ const Navbar = ({ messages, setMessages, currTab, setCurrTab }: Props) => {
 
             {isPageNavOpen && (
                 <div className="nav-submenu animate-fadein">
-                    <PageContent delay={0} selected={currTab} setSelected={setCurrTab} />
+                    <PageContent delay={0} selected={currTab} setSelected={(idx) => {setCurrTab(idx); setIsPageNavOpen(!isPageNavOpen)}} />
                 </div>
             )}
         </nav>

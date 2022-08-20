@@ -20,7 +20,7 @@ export const pages: Page[] = [
     {
         name: "Projects",
         icon: faCode,
-        url: "/Hello",
+        url: "/projects",
     },
     {
         name: "Honors and Awards",

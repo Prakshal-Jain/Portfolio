@@ -1,0 +1,66 @@
+.circle-small {
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 100%;
+}
+
+.outer-window {
+    color: #fff;
+    margin: 2em;
+    background-color: #151516;
+    border-radius: 0.6em;
+    padding-top: 0.6em;
+    border: 0.1em solid #28282b;
+}
+
+.inner-window {
+    background-color: #000;
+    border-radius: 0.5em;
+    text-align: left;
+}
+
+.repos {
+    padding: 2em;
+}
+
+.gh-navbar{
+    background-color: #272b33;
+    padding: 0.6em 2em;
+}
+
+.gh-select{
+    background-color: transparent;
+    color: rgba(255,255,255,0.7);
+    padding: 0.3em 0em;
+    border: thin solid #7a828e;
+    border-radius: 0.3em;
+    margin-left: 1em;
+}
+
+.repo-container {
+    border-bottom: thin solid #7a828e;
+    padding: 1em 0em;
+    margin: 0.5em 0em;
+}
+
+.project-name {
+    color: #71b7ff;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.progress-badge {
+    margin-left: 1em;
+    border: thin solid #7a828e;
+    padding: 0.2em 0.5em;
+    font-size: small;
+    border-radius: 999px;
+}
+
+.project-skill-box {
+    background-color: #28282b;
+    padding: 0.2em 0.5em;
+    font-size: small;
+    border-radius: 999px;
+    border: thin solid #7a828e;
+}
