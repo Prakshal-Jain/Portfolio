@@ -1,5 +1,3 @@
-import { faLink } from "@fortawesome/free-solid-svg-icons";
-
 export const projects = [
     {
         name: "Zeal",
@@ -14,6 +12,22 @@ export const projects = [
         description: <div>Built an open-source browser-based video editing tool. Reached 834 downloads in a single day. Currently used and contributed by several startups, universities, and many open source projects.</div>,
         link: "https://www.npmjs.com/package/react-video-editor",
         skills: ["JavaScript", "ReactJs"],
-        isInProgress: true,
+        isInProgress: false,
+    },
+
+    {
+        name: "Browser Annotator",
+        description: <div>Created and launched an open source browser extension that lets users draw, highlight, share, and annotate any webpage. I finished this project within 4 hours. Users can work collaboratively in real-time too. Reached over 698 downloads in the first week.</div>,
+        link: "https://www.npmjs.com/package/browser-annotator",
+        skills: ["JavaScript", "Chrome Extension"],
+        isInProgress: false,
+    },
+
+    {
+        name: "Draco",
+        description: <div>Collaboratively developed an open source browser extension with frontend and backend (full stack) to aware people of data privacy by showing how their important information can be hacked and used, and the corresponding preventive measures.</div>,
+        link: "https://www.youtube.com/watch?v=Zrzl-BzfybY",
+        skills: ["JavaScript", "Chrome Extension"],
+        isInProgress: false,
     },
 ]

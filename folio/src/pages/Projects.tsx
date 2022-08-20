@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import FlexLayout from "../components/FlexLayout";
 import "../css/projects.css";
 import { projects } from "../data/project_list";
+import ghavtar from "../assets/gh-avtar.png";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
     const [repos, setRepos] = useState(null);
@@ -34,6 +36,13 @@ const Projects = () => {
                                 <option value="" disabled selected>Select my real-time public repos</option>
                                 {repos}
                             </select>
+
+                            <div style={{ marginLeft: 'auto' }}>
+                                <a href="https://github.com/Prakshal-Jain" target="blank">
+                                    <img src={ghavtar} className="profile-image" />
+                                </a>
+                            </div>
+                            <FontAwesomeIcon icon={faAngleDown} />
                         </FlexLayout>
                     </div>
 
@@ -62,6 +71,7 @@ const Projects = () => {
                                 </FlexLayout>
                             </div>
                         ))}
+                        <b><a href="https://github.com/Prakshal-Jain?tab=repositories" target="_blank">Click</a> to see all my projects</b>
                     </div>
                 </div>
             </div>

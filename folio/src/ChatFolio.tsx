@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
 import ChatContainer from './pages/ChatContainer'
 import './css/chatfolio.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { messages as init_messages } from "./data/messages";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -17,6 +17,7 @@ function ChatFolio() {
   const {
     pathname
   } = new URL(url);
+
   const [currTab, setCurrTab] = useState<number>(pages.findIndex(x => x.url === pathname));
 
   return (

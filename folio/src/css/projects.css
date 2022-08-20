@@ -23,14 +23,20 @@
     padding: 2em;
 }
 
-.gh-navbar{
+.gh-navbar {
     background-color: #272b33;
     padding: 0.6em 2em;
 }
 
-.gh-select{
+@media (max-width: 768px) {
+    .gh-select {
+        display: none;
+    }
+}
+
+.gh-select {
     background-color: transparent;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     padding: 0.3em 0em;
     border: thin solid #7a828e;
     border-radius: 0.3em;
