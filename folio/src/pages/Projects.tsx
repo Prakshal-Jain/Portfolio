@@ -39,7 +39,7 @@ const Projects = () => {
 
                             <div style={{ marginLeft: 'auto' }}>
                                 <a href="https://github.com/Prakshal-Jain" target="blank">
-                                    <img src={ghavtar} className="profile-image" />
+                                    <img src={ghavtar} className="github-profile-image" />
                                 </a>
                             </div>
                             <FontAwesomeIcon icon={faAngleDown} />

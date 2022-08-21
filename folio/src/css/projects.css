@@ -34,6 +34,12 @@
     }
 }
 
+.github-profile-image{
+    border-radius: 50%;
+    width: 2em;
+    height: auto;
+}
+
 .gh-select {
     background-color: transparent;
     color: rgba(255, 255, 255, 0.7);
