@@ -5,7 +5,7 @@ import FlexLayout from "../components/FlexLayout";
 import "../css/projects.css";
 import { projects } from "../data/project_list";
 import ghavtar from "../assets/gh-avtar.png";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = () => {
     const [repos, setRepos] = useState(null);
@@ -23,19 +23,25 @@ const Projects = () => {
     return (
         <FlexLayout direction="vertical">
             <div className="outer-window">
-                <FlexLayout style={{ padding: '0em 1em 0.6em 1em' }}>
-                    <div className="circle-small" style={{ backgroundColor: 'red' }}></div>
-                    <div className="circle-small" style={{ backgroundColor: 'rgba(255, 214, 10, 1)' }}></div>
-                    <div className="circle-small" style={{ backgroundColor: 'green' }}></div>
+                <FlexLayout style={{ padding: '0em 1em 0.6em 1em' }} align="center">
+                    <div className="circle-small" style={{ backgroundColor: '#FF605C' }}></div>
+                    <div className="circle-small" style={{ backgroundColor: '#FFBD44' }}></div>
+                    <div className="circle-small" style={{ backgroundColor: '#00CA4E' }}></div>
+                    <div style={{ marginLeft: 'auto' }}>
+                        <b>My Projects</b>
+                    </div>
+                    <div style={{ marginLeft: 'auto' }}></div>
                 </FlexLayout>
                 <div className="inner-window">
                     <div className="gh-navbar">
                         <FlexLayout align="center">
                             <FontAwesomeIcon icon={faGithub} size="2x" />
-                            <select className="gh-select" onChange={handleRepoSelection}>
-                                <option value="" disabled selected>Select my real-time public repos</option>
-                                {repos}
-                            </select>
+                            {repos === null ? <div><FontAwesomeIcon icon={faSpinner} spin={true} style={{ marginLeft: '0.5em', marginRight: '0.5em' }} /><small>Fetching github projects...</small></div> :
+                                <select className="gh-select" onChange={handleRepoSelection}>
+                                    <option value="" disabled selected>Select my real-time public repos</option>
+                                    {repos}
+                                </select>
+                            }
 
                             <div style={{ marginLeft: 'auto' }}>
                                 <a href="https://github.com/Prakshal-Jain" target="blank">
