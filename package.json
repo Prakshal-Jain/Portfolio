@@ -1,8 +1,9 @@
 {
   "name": "folio",
   "version": "0.1.0",
-  "homepage": "https://prakshal-jain.github.io/Prakshal-Jain-Portfolio",
+  "homepage": "https://prakshal-jain.github.io/Prakshal-Jain-Portfolio/",
   "private": true,
+  "main": "index.js",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
