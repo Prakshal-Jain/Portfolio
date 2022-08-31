@@ -1,0 +1,23 @@
+.glow-container {
+    animation: fade-in-move-down 0.7s;
+    -moz-animation: fade-in-move-down 0.7s; /* Firefox */
+    -webkit-animation: fade-in-move-down 0.7s; /* Safari and Chrome */
+    -o-animation: fade-in-move-down 0.7s; /* Opera */
+}
+
+.glow-source {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #f0f, 0 0 140px 90px #0ff;
+}
+
+.award-heading {
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    font-size: xx-large;
+}

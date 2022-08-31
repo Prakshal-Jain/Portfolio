@@ -66,6 +66,9 @@ hr {
   background-color: #000;
 }
 
+
+
+/* ========== Fade in animation ========== */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -93,7 +96,7 @@ hr {
   }
 }
 
-@-o-keyframes fade-in-move-right {
+@-o-keyframes fade-in {
   from {
     opacity: 0;
   }
@@ -101,6 +104,48 @@ hr {
     opacity: 1;
   }
 }
+/* ============================================ */
+
+
+/* ========== Fade out animation ========== */
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* ============================================ */
+
+
 
 /* ========== Move in left animation ========== */
 @keyframes fade-in-move-left {

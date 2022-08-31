@@ -30,7 +30,7 @@ function ChatFolio() {
           <Route path="about" element={<About />} />
           <Route path="experiences" element={<Experiences />} />
           <Route path="projects" element={<Projects />} />
-          {/* <Route path="awards" element={<Awards />} /> */}
+          <Route path="awards" element={<Awards />} />
         </Routes>
       </BrowserRouter>
     </div>

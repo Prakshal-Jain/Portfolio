@@ -3,8 +3,7 @@ import FlexLayout from "../components/FlexLayout";
 import Hello from "../assets/Hello.png";
 import Sure from "../assets/Sure.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faClose, faHeart, faSmile } from "@fortawesome/free-solid-svg-icons";
-import PageContent from "../components/PageContent";
+import { faBars, faClose, faHeart } from "@fortawesome/free-solid-svg-icons";
 import '../css/chatfolio.css';
 
 export const messages = [
