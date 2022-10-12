@@ -10,6 +10,7 @@ import Experiences from './pages/Experiences';
 import Awards from './pages/Awards';
 import { pages } from "./data/pages"
 import Projects from './pages/Projects';
+import NotFoundPage from './pages/NotFoundPage';
 
 function ChatFolio() {
   const [messages, setMessages] = useState(init_messages);
@@ -23,14 +24,15 @@ function ChatFolio() {
 
   return (
     <div className="fullheight">
-      <BrowserRouter>
+      <BrowserRouter basename="/Portfolio">
         <Navbar messages={messages} setMessages={setMessages} currTab={currTab} setCurrTab={setCurrTab} />
         <Routes>
           <Route path="/" element={<ChatContainer messages={messages} />} />
           <Route path="about" element={<About />} />
           <Route path="experiences" element={<Experiences />} />
           <Route path="projects" element={<Projects />} />
-          <Route path="awards" element={<Awards />} />
+          {/* <Route path="awards" element={<Awards />} /> */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,5 +1,13 @@
 export const projects = [
     {
+        name: "Continuity",
+        description: <div>A browser app for Android and iOS devices, and extension for windows and Macs to <b>seamlessly sync your tabs across all your devices in real time.</b></div>,
+        link: "https://www.linkedin.com/posts/prakshal-jain-profile_android-ios-windows-activity-6982703981231796224-_Ya4?utm_source=share&utm_medium=member_desktop",
+        skills: ["Python", "JavaScript", "React Native", "Django", "Rest Framework", "Browser Extension"],
+        isInProgress: true,
+    },
+
+    {
         name: "Zeal",
         description: <div>Singlehandedly developed and launched a Full Stack idea-sharing and teammate search platform made with ReactJS and Django for personal/academic projects, events, and startups. Currently used by 100+ students at University at Buffalo and Blackstone Launchpad for their entrepreneurship team events.</div>,
         link: "https://www.zealteams.com/",
