@@ -1,9 +1,12 @@
-import { faCode, faStar, faSuitcase, faTrophy, faUser, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faStar, faSuitcase, faUser, IconDefinition, faFile } from "@fortawesome/free-solid-svg-icons";
+import resume from "../assets/Prakshal_Resume.pdf";
+import recommendation from "../assets/recommendation.pdf"
 
 type Page = {
     name: string,
     icon: IconDefinition,
-    url: string
+    url: string,
+    isAnchorTag?: boolean
 }
 
 export const pages: Page[] = [
@@ -22,11 +25,18 @@ export const pages: Page[] = [
         icon: faCode,
         url: "/projects",
     },
-    // {
-    //     name: "My Story",
-    //     icon: faTrophy,
-    //     url: "/story",
-    // },
+    {
+        name: "Resume",
+        icon: faFile,
+        url: resume,
+        isAnchorTag: true,
+    },
+    {
+        name: "Recommendation",
+        icon: faStar,
+        url: recommendation,
+        isAnchorTag: true,
+    }
     // {
     //     name: "Recommenations",
     //     icon: faStar,

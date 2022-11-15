@@ -37,14 +37,25 @@ const PageContent = (props: Props) => {
             <FlexLayout direction="vertical" align="center" style={props.style}>
                 <div className={`pagecontent-root ${props.isSticky === true ? "sticky" : ""}`} ref={props.isSticky === true ? messagesEndRef : null}>
                     <FlexLayout direction="horizontal" align="stretch" style={{ flexWrap: 'wrap' }}>
-                        {pages.map(({ name, url, icon }, index) => (
-                            <Link to={url} className={`tile ${props.selected === index ? "active-tile" : ""}`} role="button" style={{textDecoration: 'none'}} onClick={() => props.setSelected(index)} key={`pagelink-${index}`}>
+                        {pages.map(({ name, url, icon, isAnchorTag }, index) => isAnchorTag !== true ? (
+                            <Link to={url} className={`tile ${props.selected === index ? "active-tile" : ""}`} role="button" style={{ textDecoration: 'none' }} onClick={() => props.setSelected(index)} key={`pagelink-${index}`}>
                                 <FlexLayout>
                                     <FontAwesomeIcon icon={icon} />
                                     <div>{name}</div>
                                 </FlexLayout>
                             </Link>
-                        ))}
+                        )
+                            :
+                            (
+                                <a href={url} className={`tile ${props.selected === index ? "active-tile" : ""}`} role="button" style={{ textDecoration: 'none' }} onClick={() => props.setSelected(index)} key={`pagelink-${index}`}>
+                                    <FlexLayout>
+                                        <FontAwesomeIcon icon={icon} />
+                                        <div>{name}</div>
+                                    </FlexLayout>
+                                </a>
+                            )
+                        )
+                        }
                     </FlexLayout>
                 </div>
             </FlexLayout>
