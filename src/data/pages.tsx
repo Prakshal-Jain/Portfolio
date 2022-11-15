@@ -22,11 +22,11 @@ export const pages: Page[] = [
         icon: faCode,
         url: "/projects",
     },
-    {
-        name: "Honors and Awards",
-        icon: faTrophy,
-        url: "/awards",
-    },
+    // {
+    //     name: "My Story",
+    //     icon: faTrophy,
+    //     url: "/story",
+    // },
     // {
     //     name: "Recommenations",
     //     icon: faStar,

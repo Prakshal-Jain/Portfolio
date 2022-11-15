@@ -10,6 +10,7 @@ import Experiences from './pages/Experiences';
 import Awards from './pages/Awards';
 import { pages } from "./data/pages"
 import Projects from './pages/Projects';
+import MyStory from './pages/MyStory';
 import NotFoundPage from './pages/NotFoundPage';
 
 function ChatFolio() {
@@ -31,7 +32,7 @@ function ChatFolio() {
           <Route path="about" element={<About />} />
           <Route path="experiences" element={<Experiences />} />
           <Route path="projects" element={<Projects />} />
-          {/* <Route path="awards" element={<Awards />} /> */}
+          <Route path="story" element={<MyStory />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
