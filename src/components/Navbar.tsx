@@ -10,22 +10,11 @@ import PageContent from './PageContent';
 import { useState } from 'react';
 
 type Props = {
-    messages: JSX.Element[],
-    setMessages: (message: JSX.Element[]) => void
     currTab: number,
     setCurrTab: (tabIdx: number) => void;
 }
 
-const Navbar = ({ messages, setMessages, currTab, setCurrTab }: Props) => {
-
-    const handleSetMessages = (): void => {
-        const elem = <ChatBubble isSent={false} delay={0}>
-            <div>My number is <b>+1 (716) 730-0312</b></div>
-            <div>Please feel free to reach out to me.</div>
-        </ChatBubble>
-        const backup = [...messages, elem];
-        setMessages(backup);
-    }
+const Navbar = ({ currTab, setCurrTab }: Props) => {
 
     const [isPageNavOpen, setIsPageNavOpen] = useState<boolean>(true);
 
@@ -41,7 +30,6 @@ const Navbar = ({ messages, setMessages, currTab, setCurrTab }: Props) => {
                 <h3 style={{ marginLeft: '0.5em' }}><Link to="/" className="nostyle" onClick={() => setCurrTab(-1)}>Prakshal Jain</Link></h3>
 
                 <div style={{ marginLeft: 'auto' }}>
-                    <FontAwesomeIcon icon={faPhone} className="icon" size="lg" onClick={handleSetMessages} />
                     <a href="https://www.linkedin.com/in/prakshal-jain-profile/" target="_blank"><FontAwesomeIcon icon={faLinkedin} className="icon" size="lg" style={{ marginLeft: '1.5em' }} /></a>
                     <a href="https://github.com/Prakshal-Jain/" target="_blank"><FontAwesomeIcon icon={faGithub} className="icon" size="lg" style={{ marginLeft: '1.5em' }} /></a>
                     <a className="icon" style={{ marginLeft: '1.5em' }} onClick={() => setIsPageNavOpen(!isPageNavOpen)}><FontAwesomeIcon icon={isPageNavOpen ? faClose : faBars} /></a>
@@ -50,7 +38,7 @@ const Navbar = ({ messages, setMessages, currTab, setCurrTab }: Props) => {
 
             {isPageNavOpen && (
                 <div className="nav-submenu animate-fadein">
-                    <PageContent delay={0} selected={currTab} setSelected={(idx) => {setCurrTab(idx); setIsPageNavOpen(!isPageNavOpen)}} />
+                    <PageContent delay={0} selected={currTab} setSelected={(idx) => { setCurrTab(idx); setIsPageNavOpen(!isPageNavOpen) }} />
                 </div>
             )}
         </nav>

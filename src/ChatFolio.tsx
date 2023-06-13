@@ -26,7 +26,7 @@ function ChatFolio() {
   return (
     <div className="fullheight">
       <BrowserRouter basename="/Portfolio">
-        <Navbar messages={messages} setMessages={setMessages} currTab={currTab} setCurrTab={setCurrTab} />
+        <Navbar currTab={currTab} setCurrTab={setCurrTab} />
         <Routes>
           <Route path="/" element={<ChatContainer messages={messages} />} />
           <Route path="about" element={<About />} />
