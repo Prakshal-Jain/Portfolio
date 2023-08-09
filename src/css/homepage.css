@@ -1,0 +1,40 @@
+.heroImageContainer {
+    position: absolute;
+    left: calc(50% - 10vw);
+    top: calc(50% - 10vw);
+}
+
+.heroImage {
+    width: 20vw;
+    height: 20vw;
+    pointer-events: none;
+    user-select: none;
+}
+
+.iconPosition {
+    position: absolute;
+    animation: floating 3s ease-in-out 3, fadeInAnimation 2s ease 0ms forwards;
+    color: rgb(176, 182, 188);
+    cursor: pointer;
+    opacity: 0;
+}
+
+.iconPosition:hover{
+    color: #fff;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 10px); }
+    100%   { transform: translate(0, -0px); }   
+}
