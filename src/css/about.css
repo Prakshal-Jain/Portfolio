@@ -20,3 +20,12 @@
     padding: 0.5em;
     border-radius: 0.5em;
 }
+
+.list_links {
+    text-decoration: none;
+    color: #1084fc;
+}
+
+.list_links:hover {
+    text-decoration: underline;
+}

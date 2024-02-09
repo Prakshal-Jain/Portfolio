@@ -14,6 +14,7 @@ const About = () => (
                 <img src={Heart} className="about-image" />
                 <h3>Designer, Developer, Innovator</h3>
                 <h4>Front End Software Developer Intern at Meta (Facebook)</h4>
+                <a href="https://docs.google.com/document/d/1g7NucMgAKw3QEDrACcVjsvjM7tdXCM6IvndT9dTjYiE/edit?usp=sharing" target="_blank" className="list_links">Diary</a>
             </div>
 
             <div className="about-container" style={{ flexGrow: 1 }}>
