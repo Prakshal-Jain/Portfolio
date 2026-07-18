@@ -1,5 +1,10 @@
 name: Deploy to GitHub Pages
 
+# The portfolio now lives at https://prakshal.me (Cloudflare Pages). This repo's
+# GitHub Pages deploy just publishes a static redirect that bounces every
+# visitor (and every deep link) to prakshal.me. The React app in src/ is kept
+# for history but is no longer built or deployed.
+
 on:
   push:
     branches: [main, master]
@@ -10,48 +15,29 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run
-# in-progress and latest queued. Don't cancel in-progress to let it complete.
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
   deploy:
-    name: Deploy
-    needs: build
+    name: Deploy redirect
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload redirect artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./redirect
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
